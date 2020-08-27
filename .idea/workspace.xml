@@ -20,9 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29c5d3bb-a3c9-4bc8-a5a1-1ba55889694c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598539933087</updated>
-      <workItem from="1598539934251" duration="13859000" />
+      <workItem from="1598539934251" duration="14869000" />
     </task>
     <task id="LOCAL-00001" summary="nav and footer">
       <created>1598548343194</created>
@@ -70,7 +69,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598548343194</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="page fill working">
+      <created>1598559843791</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1598559843791</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -89,12 +95,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="nav and footer" />
-    <option name="LAST_COMMIT_MESSAGE" value="nav and footer" />
+    <MESSAGE value="page fill working" />
+    <option name="LAST_COMMIT_MESSAGE" value="page fill working" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="722" y="153" key="Vcs.Push.Dialog.v2" timestamp="1598548347388">
+    <state x="722" y="153" key="Vcs.Push.Dialog.v2" timestamp="1598559848273">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="722" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1598548347388" />
+    <state x="722" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1598559848273" />
   </component>
 </project>

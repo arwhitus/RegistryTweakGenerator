@@ -4,6 +4,8 @@ var disableCortana = {
     title: "Disable Cortana",
     lines: ['[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search]',
         '"AllowCortana"=dword:00000000'],
+    revlines: ['[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search]',
+        '"AllowCortana"=dword:00000001'],
     html: "",
     selected: 0
 };
@@ -12,6 +14,8 @@ var disableYourPhone = {
     title: "Disable Your Phone App",
     lines: ['[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\System]',
         '"EnableMmx"=dword:00000000'],
+    revlines: ['[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\System]',
+        '"EnableMmx"=dword:00000001'],
     html: "",
     selected: 0
 };
@@ -103,7 +107,23 @@ function Generate() {
         alert("No tweaks are selected for .reg file generation.")
     }
     else {
-        DownloadText("a,b,c\n1,2,3", "text/reg", "tweaks.reg");
+        var outreg = "Windows Registry Editor Version 5.00\n\n"
+        for(var i = 0; i < tweaks.length; i++) {
+            if(tweaks[i].selected === 1) {
+                for(var j = 0; j < tweaks[i].lines.length; j++) {
+                    outreg = outreg + tweaks[i].lines[j] + "\n";
+                }
+                outreg = outreg + "\n";
+            }
+            else if(tweaks[i].selected === 2) {
+                for(var j = 0; j < tweaks[i].revlines.length; j++) {
+                    outreg = outreg + tweaks[i].revlines[j] + "\n";
+                }
+                outreg = outreg + "\n";
+            }
+        }
+
+        DownloadText(outreg, "text/reg", "tweaks.reg");
     }
 }
 
