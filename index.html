@@ -8,34 +8,60 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="script.js"></script>
 </head>
 <body>
 
 <!-- navbar -->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
     <div class="mr-auto order-0">
         <a class="navbar-brand mx-auto" href="#">Registry Tweak Generator</a>
     </div>
     <div class="navbar">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="https://github.com/arwhitus/RegistryTweakGenerator">About/GitHub</a>
             </li>
         </ul>
     </div>
 </nav>
 
-<!-- main content -->
+<!-- top content -->
 <div class="container">
     <div class="jumbotron">
-        <h1>Registry Tweak Generator</h1>
-        <p>Generate simple, commented .reg files to apply desired registry tweaks to Windows.</p>
+        <div class="row">
+            <div class="col-sm-5">
+                <h3>Generate .reg files to apply tweaks to the Windows registry.</h3>
+                <p>All keys modified in the registry can be viewed by clicking 'show change' on the respective tweak.
+                    The produced .reg file can be viewed with any text editor to view the changes, and will be commented
+                    for ease of use. This software is provided with no warranty expressed or implied. Issues and recommendations
+                    can be submitted via GitHub by following the link in the top bar.</p>
+            </div>
+            <div class="col-sm-7 mt-4">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">1. Select the tweaks you wish to apply (or reverse).</li>
+                    <li class="list-group-item">2. Click the 'generate' button at the top of the page.</li>
+                    <li class="list-group-item">3. Double click on the downloaded file to run it.</li>
+                    <li class="list-group-item">4. Some tweaks may require a system restart to apply.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="button" class="btn btn-primary mx-auto mt-5" onclick="Generate()">Generate File</button>
+        </div>
     </div>
 </div>
 
+<!-- form -->
+<div class="container">
+    <ul class="list-group list-group-flush" id="tweaks">
+    </ul>
+</div>
+
 <!-- footer -->
-<footer class="page-footer font-small">
-    <div class="footer-copyright text-center ">© 2020 arwhitus</div>
+<footer class="page-footer">
+    <div class="text-center">Copyright © 2020 arwhitus</div>
 </footer>
 
 </body>
