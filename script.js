@@ -1,5 +1,15 @@
 
 // individual tweaks
+var disableBingStart = {
+    title: "Disable Bing Results in Windows Search",
+    lines: ['[HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Explorer]',
+        '"DisableSearchBoxSuggestions"=dword:00000001'],
+    revlines: ['[HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\Explorer]',
+        '"DisableSearchBoxSuggestions"=dword:00000000'],
+    html: "",
+    selected: 0
+};
+
 var disableCortana = {
     title: "Disable Cortana",
     lines: ['[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search]',
@@ -20,8 +30,18 @@ var disableYourPhone = {
     selected: 0
 };
 
+var printScreenScreenSnip = {
+    title: "Launch Snip and Sketch with the Print Screen Key",
+    lines: ['[HKEY_CURRENT_USER\\Control Panel\\Keyboard]',
+        '"PrintScreenKeyForSnippingEnabled"=dword:00000001'],
+    revlines: ['[HKEY_CURRENT_USER\\Control Panel\\Keyboard]',
+        '"PrintScreenKeyForSnippingEnabled"=dword:00000000'],
+    html: "",
+    selected: 0
+};
+
 // combined tweaks
-var tweaks = [disableCortana, disableYourPhone];
+var tweaks = [disableBingStart, disableCortana, disableYourPhone, printScreenScreenSnip];
 
 // add html to tweaks
 function MakeHTML() {
