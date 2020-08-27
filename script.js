@@ -107,15 +107,19 @@ function Generate() {
         alert("No tweaks are selected for .reg file generation.")
     }
     else {
-        var outreg = "Windows Registry Editor Version 5.00\n\n"
+        var outreg = "Windows Registry Editor Version 5.00\n\n" +
+            "; ----- Generated using https://arwhitus.github.io/RegistryTweakGenerator/ ----- ;\n\n\n";
+
         for(var i = 0; i < tweaks.length; i++) {
             if(tweaks[i].selected === 1) {
+                outreg = outreg + "; " + tweaks[i].title + "\n";
                 for(var j = 0; j < tweaks[i].lines.length; j++) {
                     outreg = outreg + tweaks[i].lines[j] + "\n";
                 }
                 outreg = outreg + "\n";
             }
             else if(tweaks[i].selected === 2) {
+                outreg = outreg + "; " + tweaks[i].title + " - REVERSED\n";
                 for(var j = 0; j < tweaks[i].revlines.length; j++) {
                     outreg = outreg + tweaks[i].revlines[j] + "\n";
                 }
